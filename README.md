@@ -2,7 +2,8 @@
 
 > 滴水之家微信客户端。
 
-* 安装依赖 `npm i`.
+* 1.安装 `Nodejs `（https://nodejs.org/en/）.
+* 2.安装项目依赖 `npm i`.
 
 ## 生成步骤
 
