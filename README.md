@@ -10,7 +10,7 @@
 # 安装依赖
 npm install
 
-# 运行开发环境 localhost:8040
+# 运行开发环境 localhost:8080
 npm run dev
 
 # 运行生产编译
