@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+// 基础样式，变量，和样式reset
+@import "./base/var";
+@import "./base/base";
+
+// 按钮样式
+@import "./base/button";
+
+// 通用函数类minxins
+@import "./base/mixins";
+@import "./base/defined";
+@import "./base/normalize";

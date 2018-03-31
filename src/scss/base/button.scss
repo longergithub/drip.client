@@ -1,0 +1,62 @@
+@charset "utf-8";
+@import "~scss/base/var";
+
+// 按钮基础样式
+.btn
+{
+    height: 28px;
+    border: 0;
+    background: $bg-button;
+    color: $font-button;
+    cursor: pointer;
+    outline: none;
+    min-width: 60px;
+    border-radius: 5px;
+    -webkit-tap-highlight-color: transparent;
+    transition: opacity .2s;
+
+    &:active
+    {
+        opacity: 0.6;
+    }
+
+    &-round
+    {
+        border-radius: 42px;
+    }
+
+    &.disable
+    {
+        opacity: .6;
+    }
+}
+
+// 宽度100%的按钮
+.btn-block
+{
+    width: 100%;
+    display: block;
+}
+
+// 默认按钮样式
+.btn-default
+{
+    &.outline
+    {
+        border: 1px solid $border-color;
+    }
+}
+
+// 绿色按钮样式
+.btn-green
+{
+    background-color: $bg-green;
+    color: $font-white;
+
+    &.outline
+    {
+        color: $font-button;
+        background-color: $bg-white;
+        border: 1px solid $border-color-green;
+    }
+}

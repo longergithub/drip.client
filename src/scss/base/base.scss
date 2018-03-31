@@ -1,0 +1,113 @@
+@charset "utf-8";
+@import "./var";
+
+*
+{
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-overflow-scrolling: touch;
+    outline: none;
+    padding: 0;
+    margin: 0;
+}
+
+// vue 数据未加载时避免显示占位符
+[v-cloak]
+{
+    display: none;
+}
+
+html,
+body
+{
+    height: 100%;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+	-webkit-overflow-scrolling: auto;      // 滑动页面具有回弹效果
+    -webkit-text-size-adjust: 100%;         // chrome内核浏览器 字体小于12px会保持12px 禁止浏览器调整字体大小
+}
+
+body
+{
+    font-family: "Microsoft YaHei UI Light", 'Avenir', "Helvetica Neue", "Helvetica", "Arial", "sans-serif" !important;
+    font-size: 12px;
+	min-width: 320px;
+	max-width: 540px;
+	margin: 0 auto !important;
+    background-color: $bg-body;
+    position: relative;
+}
+
+ul
+{
+    list-style: none;
+}
+
+ul,
+p
+{
+    margin: 0;
+    padding: 0;
+}
+
+/* 隐藏滚轮 */
+::-webkit-scrollbar
+{
+    // width: 0;
+    // height: 0;
+    // background: transparent;
+    display: none;
+    z-index: 0;
+}
+
+#drip-wechat-client,
+.drip-page-wrapper
+{
+    font-family: "PingFangSC-Regular";
+    -webkit-touch-callout: none;
+    -webkit-overflow-scrolling: auto;
+    height: 100%;
+    width: 100%;
+}
+
+.drip-content
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: auto;
+    -webkit-overflow-scrolling: auto;
+}
+
+.loadmore
+{
+    overflow: visible !important;      // 解决loadMore卡顿问题
+}
+
+input, textarea, select
+{
+    font-family: "Helvetica Neue",Helvetica,sans-serif;
+    -webkit-tap-highlight-color: transparent;
+}
+
+a
+{
+    text-decoration: none;
+    &:link,
+    &:visited
+    {
+        color: $font-base;
+    }
+    &:hover,
+    &:active
+    {
+        color: $blue-base;
+    }
+}

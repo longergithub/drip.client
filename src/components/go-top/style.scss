@@ -1,0 +1,28 @@
+@charset "utf-8";
+@import "~scss/base/var";
+
+.goto-top
+{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    right: 15px;
+    bottom: 55px;
+    background-color: $bg-white;
+    border: 1px solid $border-color;
+    border-radius: 50%;
+    font-size: 22/24*1em;
+    z-index: 100;
+}
+
+.goto-top-inner
+{
+    height: 50px;
+    padding: 10px 0;
+    line-height: 15px;
+    font-size: 12px;
+}
