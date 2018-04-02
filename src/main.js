@@ -21,9 +21,10 @@ import "filters";
 import "./scss/common.scss";
 
 // 生产环境关闭日志打印
+import { logger } from "utils/core";
 if(process.env.NODE_ENV === "production")
 {
-    newlife.logger.settings.logModel = "none";
+    logger.settings.logModel = "none";
 }
 
 // 全局文本资源
@@ -37,6 +38,8 @@ Vue.prototype.enum = enums;
 // 是否开启浏览器vue-devtools调试
 Vue.config.productionTip = (process.env.NODE_ENV !== "production");
 
+import { extend } from "utils/core";
+
 Object.defineProperties(Vue.prototype,
 {
     /**
@@ -49,7 +52,7 @@ Object.defineProperties(Vue.prototype,
      */
     cropImage:
     {
-		value: newlife.Nextends.cropImage
+		value: extend.cropImage
 	}
 });
 
@@ -61,11 +64,13 @@ const app = new Vue
     render: h => h(App)
 });
 
+import { ajax } from "utils/core";
+
 // 失败执行函数。
-let baseFailureHandler = newlife.ajax.handlers["failure"];
+let baseFailureHandler = ajax.handlers["failure"];
 
 // 重写失败执行函数。
-newlife.ajax.handlers["failure"] = (request, response) =>
+ajax.handlers["failure"] = (request, response) =>
 {
     // 弹出提示
     app.$vux.toast.show

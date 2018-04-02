@@ -1,4 +1,6 @@
-const assign = newlife.Nextends.assign;
+import { extend } from "utils/core";
+
+const assign = extend.assign;
 
 const state =
 {

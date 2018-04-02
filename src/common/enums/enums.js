@@ -1,6 +1,3 @@
-/**
- * Created by newlife on 2017/7/6.
- */
 let _private = {
     hasOwnProperty: Object.prototype.hasOwnProperty         // 判断一个属性是定义在对象本身而不是继承自原型链
 };

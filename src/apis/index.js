@@ -1,5 +1,6 @@
 import API from "./api-urls";
 import { ajaxTimeout }  from "settings";
+import { ajax } from "utils/core";
 
 let send = (options, url, method) =>
 {
@@ -27,5 +28,5 @@ let send = (options, url, method) =>
     };
 
     // 开始发送请求
-    newlife.ajax[method](request);
+    ajax[method](request);
 };

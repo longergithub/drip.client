@@ -1,3 +1,5 @@
+import { storage } from "utils/core";
+
 export default
 {
     getTimestamp()
@@ -18,19 +20,19 @@ export default
     // 设置本地凭证信息。
     setCredential(credential)
     {
-        newlife.storage.set(this.getStorageKey("credential"), credential);
+        storage.set(this.getStorageKey("credential"), credential);
     },
 
     // 当前本地凭证信息。
     getCredential()
     {
-        return newlife.storage.get(this.getStorageKey("credential"));
+        return storage.get(this.getStorageKey("credential"));
     },
 
     // 清空当前本地凭证信息。
     clearCredential()
     {
-        newlife.storage.remove(this.getStorageKey("credential"));
+        storage.remove(this.getStorageKey("credential"));
     },
 
     // 当前用户信息。
